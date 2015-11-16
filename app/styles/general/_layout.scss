@@ -1,0 +1,139 @@
+.siteLogo {
+	display: inline-block;
+	background-color: $green;
+	width:23%;
+	border: 1px solid #fff;
+	margin-top:40px;
+	.footer &{
+		border: 0;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top:10px;
+	}
+	@media (min-width: $screen-md-min) {
+		width:26%;
+	}
+}
+
+.siteLogo__title {
+	background-repeat: no-repeat;
+	background-image: url('../images/fifty-logo--white.png');
+	background-size: 90%;
+	background-position: 50%;
+	display: inline-block;
+	padding:20px;
+	height:0;
+	padding-bottom: 30%;
+	overflow: hidden;
+    text-indent: -1100%;
+    width:100%;
+}
+
+.main-header {
+	height:0;
+	overflow: hidden;
+	padding-bottom:57%;
+	background-repeat: no-repeat;
+	background-image: url('../images/dubai-grand-prix.jpg');
+	background-size: 100%;
+	background-position: 50% 0;
+	border-bottom: 1px solid $green;
+	@media (min-width: $screen-sm-min) {
+		background-position: 50% bottom;
+	}
+	
+	@media (min-width: $screen-md-min) {
+		padding-bottom:52%;
+	}
+
+}
+
+.container .jumbotron {
+	margin:0;
+	padding-left:0 !important;
+	padding-right:0 !important;
+}
+
+.bg-green {
+	background-color: $green;
+}
+
+.bg-black {
+	background-color: #000;
+}
+
+.bg-white {
+	background-color: #fff;
+}
+
+.bg-light-blue {
+	background-color: $blue-light;
+}
+
+.bg-dark-blue {
+	background-color: $blue-dark;
+}
+
+.block {
+	margin-bottom:40px;
+}
+
+.container {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.services {
+	padding-bottom:40px;
+}
+
+.what-we-do{
+
+	background-repeat: no-repeat;
+	background-image: url('../images/grand-prix-crowd.jpg');
+	background-size: cover;
+	background-position: 50%;
+	border-bottom: 1px solid $green;
+	position: relative;
+	@media (min-width: $screen-md-min) {
+		height:0;
+		overflow: hidden;
+		padding-bottom:43%;
+	}
+	@media (min-width: $screen-lg-min) {
+		padding-bottom:32%;
+	}
+	.container {
+		background-color: rgba(34,57,96, 0.8);
+		padding-bottom:20px;
+	}
+
+	p:not(.lead), ul {
+		font-size: 16px;
+	}
+
+	.what-we-do__content {
+		padding:0;
+		@media (min-width: $screen-md-min) {
+			padding:5% 0;
+		}
+		@media (min-width: $screen-lg-min) {
+			padding:3.5% 0;
+		}
+	}
+
+}
+
+.footer {
+	padding-bottom: 50px;
+	a, a:visited{
+		color: $blue-dark;
+		text-decoration: underline;
+	}
+
+	@media (max-width: $screen-xxs-max) {
+		.col-xs-4{width:100%;}
+
+	}
+	
+}
