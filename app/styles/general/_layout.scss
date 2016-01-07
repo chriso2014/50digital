@@ -1,9 +1,8 @@
 .siteLogo {
 	display: inline-block;
 	background-color: $green;
-	width:23%;
-	border: 1px solid #fff;
-	margin-top:40px;
+	width:30%;
+	min-width:175px;
 	.footer &{
 		border: 0;
 		margin-left: auto;
@@ -11,39 +10,78 @@
 		margin-top:10px;
 	}
 	@media (min-width: $screen-md-min) {
-		width:26%;
+		width:24%;
+		.footer &{width:20%;}
 	}
 }
 
 .siteLogo__title {
 	background-repeat: no-repeat;
 	background-image: url('../images/fifty-logo--white.png');
-	background-size: 90%;
-	background-position: 50%;
+	background-size: 100%;
+	background-position: 50% bottom;
 	display: inline-block;
-	padding:20px;
 	height:0;
-	padding-bottom: 30%;
+	padding-bottom: 22%;
 	overflow: hidden;
     text-indent: -1100%;
+    vertical-align:bottom;
     width:100%;
+    .footer &{
+    	background-size: 100%;
+    }
 }
 
 .main-header {
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	.header-container{
+		display: table;
+		padding:22px 0 20px;
+		width:100%;
+	}
+	.siteLogo, .header-text{
+		display:table-cell;
+		vertical-align: bottom;
+	}
+	.header-text{
+		padding-left:20px;
+	}
+	.lead{
+		margin-bottom:0;
+		padding-bottom:4px;
+
+		@media (max-width: $screen-xxs-max) {
+			display: none;
+		}
+
+		@media (min-width: $screen-lg-min) {
+			padding-bottom:7px;
+		}
+	}
+
+}
+
+.main-hero {
 	height:0;
 	overflow: hidden;
-	padding-bottom:57%;
+	padding-bottom:55%;
 	background-repeat: no-repeat;
 	background-image: url('../images/dubai-grand-prix.jpg');
 	background-size: 100%;
-	background-position: 50% 0;
+	background-position: 50% 75%;
 	border-bottom: 1px solid $green;
+	@media (max-width: $screen-xxs-max) {
+		background: $blue-light;
+		padding: 0;
+		height:auto;
+	}
 	@media (min-width: $screen-sm-min) {
 		background-position: 50% bottom;
 	}
 	
 	@media (min-width: $screen-md-min) {
-		padding-bottom:52%;
+		padding-bottom:50%;
 	}
 
 }
@@ -85,6 +123,13 @@
 
 .services {
 	padding-bottom:40px;
+	background-repeat: no-repeat;
+	background-image: url('../images/our-services.jpg');
+	background-size: auto 100%;
+	background-position: top right;
+	@media (max-width: $screen-xxs-max) {
+		background: white;
+	}
 }
 
 .what-we-do{
@@ -98,10 +143,10 @@
 	@media (min-width: $screen-md-min) {
 		height:0;
 		overflow: hidden;
-		padding-bottom:43%;
+		padding-bottom:55%;
 	}
 	@media (min-width: $screen-lg-min) {
-		padding-bottom:32%;
+		padding-bottom:42%;
 	}
 	.container {
 		background-color: rgba(34,57,96, 0.8);
@@ -115,10 +160,10 @@
 	.what-we-do__content {
 		padding:0;
 		@media (min-width: $screen-md-min) {
-			padding:5% 0;
+			padding:10% 0;
 		}
 		@media (min-width: $screen-lg-min) {
-			padding:3.5% 0;
+			padding:8% 0;
 		}
 	}
 
@@ -126,6 +171,8 @@
 
 .footer {
 	padding-bottom: 50px;
+	padding-top:20px;
+	.jumbotron h2{border-bottom:2px solid #fff;}
 	a, a:visited{
 		color: $blue-dark;
 		text-decoration: underline;
