@@ -29,8 +29,15 @@ li {
 
 h2{	
 	margin:0;
-	padding-bottom: 12px;
-	border-bottom: 2px solid $green;
+	font-size: 44px;
+	&:before{
+		content:"";
+		display: block;
+		margin-bottom:15px;
+		width:80px;
+		height:12px;
+		background-color: $green;
+	}
 }
 
 .grid__item h3:first-of-type{
@@ -46,12 +53,7 @@ h4, .h4 {
 }
 
 .services {
-	counter-reset: section; 
-	h3:before {
-		counter-increment: section; 
-  		content: counter(section) ". ";
-  		color: $green;
-	}
+	.h4{margin-bottom: 5px;}
 }
 
 .hero-lead {
@@ -75,11 +77,11 @@ h4, .h4 {
 	}
 
 	@media (min-width: $screen-md-min) {
-		font-size:36px;
+		font-size:42px;
 	}
 
 	@media (min-width: $screen-lg-min) {
-		font-size:42px;
+		font-size:54px;
 	}
 }
 
@@ -96,7 +98,7 @@ h4, .h4 {
 
 @media (max-width: $screen-sm-max) {
 	h2, .h2 {
-		font-size: 24px;
+		font-size: 36px;
 	}
 	h3, .h3 {
 		font-size: 18px;

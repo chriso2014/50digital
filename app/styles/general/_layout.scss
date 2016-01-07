@@ -37,8 +37,11 @@
 	border-bottom:1px solid #fff;
 	.header-container{
 		display: table;
-		padding:22px 0 20px;
+		padding:32px 0 30px;
 		width:100%;
+		@media (max-width: $screen-xxs-max) {
+			padding:12px 0 10px;
+		}
 	}
 	.siteLogo, .header-text{
 		display:table-cell;
@@ -73,15 +76,19 @@
 	border-bottom: 1px solid $green;
 	@media (max-width: $screen-xxs-max) {
 		background: $blue-light;
-		padding: 0;
+		padding: 10px 0;
 		height:auto;
 	}
 	@media (min-width: $screen-sm-min) {
-		background-position: 50% bottom;
+		background-position: 62% bottom;
 	}
 	
 	@media (min-width: $screen-md-min) {
-		padding-bottom:50%;
+		padding-bottom:54%;
+	}
+
+	@media (min-width: 1600px) {
+		padding-bottom:51%;
 	}
 
 }
@@ -122,6 +129,7 @@
 }
 
 .services {
+	background-attachment: fixed;
 	padding-bottom:40px;
 	background-repeat: no-repeat;
 	background-image: url('../images/our-services.jpg');
@@ -130,40 +138,76 @@
 	@media (max-width: $screen-xxs-max) {
 		background: white;
 	}
+	.grid__item{
+		margin-bottom: 10px;
+		position: relative;
+		@media (min-width: $screen-sm-min) {
+			height:0;
+			margin-bottom: 20px;
+			overflow: hidden;
+			padding-bottom: 28%;
+		}
+		@media (min-width: $screen-md-min) {
+			padding-bottom: 23%;
+		}
+		@media (min-width: $screen-lg-min) {
+			padding-bottom: 16%;
+		}
+		.service__item{
+			background-color: rgba(34,57,96, 0.2);
+			padding:10px;
+			text-align: center;
+			display: inline-block;
+			@media (min-width: $screen-sm-min) {
+				position: absolute;
+				height:100%;
+				vertical-align: middle;
+			}
+		}
+	}
 }
 
 .what-we-do{
-
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-image: url('../images/grand-prix-crowd.jpg');
 	background-size: cover;
 	background-position: 50%;
 	border-bottom: 1px solid $green;
 	position: relative;
-	@media (min-width: $screen-md-min) {
+	@media (min-width: $screen-sm-min) {
 		height:0;
 		overflow: hidden;
 		padding-bottom:55%;
 	}
 	@media (min-width: $screen-lg-min) {
-		padding-bottom:42%;
+		padding-bottom:35%;
 	}
 	.container {
 		background-color: rgba(34,57,96, 0.8);
+		//background-color: $blue-light;
 		padding-bottom:20px;
 	}
 
 	p:not(.lead), ul {
 		font-size: 16px;
 	}
-
-	.what-we-do__content {
-		padding:0;
-		@media (min-width: $screen-md-min) {
-			padding:10% 0;
-		}
-		@media (min-width: $screen-lg-min) {
-			padding:8% 0;
+	@media (min-width: $screen-sm-min) {
+		.what-we-do__content {
+			top:50%;
+			width:100%;
+			display: inline-block;
+			position: absolute;
+			.container {
+				transform: translate(0, -50%)
+			}
+			/*padding:0;
+			@media (min-width: $screen-md-min) {
+				padding:10% 0;
+			}
+			@media (min-width: $screen-lg-min) {
+				padding:8% 0;
+			}*/
 		}
 	}
 
@@ -171,8 +215,7 @@
 
 .footer {
 	padding-bottom: 50px;
-	padding-top:20px;
-	.jumbotron h2{border-bottom:2px solid #fff;}
+	.jumbotron h2:before{background-color: #fff;}
 	a, a:visited{
 		color: $blue-dark;
 		text-decoration: underline;
